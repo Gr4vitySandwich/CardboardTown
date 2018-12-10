@@ -37,7 +37,7 @@ public class MoveObject : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x/2, transform.rotation.eulerAngles.y/2, 0);
+        //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0); static object
 
 
         distance = Vector3.Distance(item.transform.position, tempParent.transform.position);
@@ -53,6 +53,19 @@ public class MoveObject : MonoBehaviour {
         {
             if(distance <= 1f)
             {
+                /*if (item.GetComponent<Rigidbody>().detectCollisions == true)
+                {
+                    
+                    item.transform.parent = null;
+                }
+                else
+                {
+                    item.transform.position = guide.position;
+                }*/
+
+                //item.transform.position = guide.position; follow player
+                //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0); static rotation when holding
+
                 item.GetComponent<Rigidbody>().useGravity = false;
                 item.GetComponent<Rigidbody>().detectCollisions = true;
 
