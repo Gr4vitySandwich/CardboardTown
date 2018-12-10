@@ -65,7 +65,7 @@ public class MoveObject : MonoBehaviour {
                 }*/
 
                 //item.transform.position = guide.position; follow player
-                transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+                transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
                 item.GetComponent<Rigidbody>().useGravity = false;
                 item.GetComponent<Rigidbody>().detectCollisions = true;
