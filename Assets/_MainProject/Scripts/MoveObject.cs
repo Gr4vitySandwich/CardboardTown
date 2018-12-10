@@ -41,7 +41,8 @@ public class MoveObject : MonoBehaviour {
 
 
         distance = Vector3.Distance(item.transform.position, tempParent.transform.position);
-        if(distance >= 0.6f)
+
+        if(distance >= 1f)
         {
             isHolding = false;
             item.transform.parent = null;
@@ -50,7 +51,7 @@ public class MoveObject : MonoBehaviour {
 
         if (isHolding == true)
         {
-            if(distance <= 0.6f)
+            if(distance <= 1f)
             {
                 item.GetComponent<Rigidbody>().useGravity = false;
                 item.GetComponent<Rigidbody>().detectCollisions = true;
