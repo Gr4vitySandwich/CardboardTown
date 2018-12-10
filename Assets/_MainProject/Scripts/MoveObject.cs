@@ -11,6 +11,7 @@ public class MoveObject : MonoBehaviour {
     float disableHold = 1.0f;
 
 
+    public Image aim;
     public GameObject item;
     public GameObject tempParent;
     public Transform guide;
@@ -64,7 +65,7 @@ public class MoveObject : MonoBehaviour {
                 }*/
 
                 //item.transform.position = guide.position; follow player
-                //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0); static rotation when holding
+                transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 
                 item.GetComponent<Rigidbody>().useGravity = false;
                 item.GetComponent<Rigidbody>().detectCollisions = true;
@@ -100,6 +101,9 @@ public class MoveObject : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+
+        
+
         item.GetComponent<Rigidbody>().useGravity = true;
         item.GetComponent<Rigidbody>().isKinematic = false;
         item.transform.parent = null;
