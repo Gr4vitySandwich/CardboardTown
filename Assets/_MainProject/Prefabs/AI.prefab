@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 136381902716635004}
   - component: {fileID: 54866293328243052}
   - component: {fileID: 195969403994529384}
-  - component: {fileID: 114936569599953878}
+  - component: {fileID: 114008096875394178}
   m_Layer: 0
   m_Name: AI
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477776229555872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.46, y: 1.41, z: 1.7255081}
+  m_LocalPosition: {x: 11.539909, y: 1.57, z: 0.8646851}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,7 +102,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114936569599953878
+--- !u!114 &114008096875394178
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,11 +110,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1477776229555872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ce5b8af33f2e245b9517ccf34e32fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 79e0532ba15c3b14e94b3d88286eb049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destination: {fileID: 4489928841070004, guid: 7fe61bd21ad13e94abc74308d7e7235d,
-    type: 2}
+  _patrolWaiting: 0
+  _totalWaitTime: 3
+  _switchProbability: 0.2
+  _patrolPoints:
+  - {fileID: 114424157807945934, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
+  - {fileID: 114641736965197054, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
+  - {fileID: 114132981259097914, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
+  - {fileID: 114836944155056068, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
+  - {fileID: 114901713739357100, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
+  - {fileID: 114234589274359554, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
+  - {fileID: 114927183322199502, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
+  - {fileID: 114705715529072010, guid: fa4a190fb13c57540940c7c9b7e7ed5d, type: 2}
 --- !u!136 &136381902716635004
 CapsuleCollider:
   m_ObjectHideFlags: 1
